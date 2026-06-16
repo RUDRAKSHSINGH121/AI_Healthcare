@@ -1,0 +1,2 @@
+# This directory is intended to contain trained machine learning model files in .pkl format. 
+# The actual .pkl files will be generated during the model training process and are not included in this file.

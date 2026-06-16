@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Health Diagnosis Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('heart_disease') }}">Heart Disease</a></li>
+                <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('breast_cancer') }}">Breast Cancer</a></li>
+                <li><a href="{{ url_for('liver_disease') }}">Liver Disease</a></li>
+                <li><a href="{{ url_for('kidney_disease') }}">Kidney Disease</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to the Diagnosis Dashboard</h2>
+        <p>Select a condition from the navigation menu to get started with your health assessment.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 Health Diagnostics. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

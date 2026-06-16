@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Risk Prediction</h1>
+        <form id="diabetes-form">
+            <label for="pregnancies">Pregnancies:</label>
+            <input type="number" id="pregnancies" name="pregnancies" required>
+
+            <label for="glucose">Glucose Level:</label>
+            <input type="number" id="glucose" name="glucose" required>
+
+            <label for="blood_pressure">Blood Pressure:</label>
+            <input type="number" id="blood_pressure" name="blood_pressure" required>
+
+            <label for="skin_thickness">Skin Thickness:</label>
+            <input type="number" id="skin_thickness" name="skin_thickness" required>
+
+            <label for="insulin">Insulin Level:</label>
+            <input type="number" id="insulin" name="insulin" required>
+
+            <label for="bmi">Body Mass Index:</label>
+            <input type="number" step="0.01" id="bmi" name="bmi" required>
+
+            <label for="diabetes_pedigree">Diabetes Pedigree Function:</label>
+            <input type="number" step="0.01" id="diabetes_pedigree" name="diabetes_pedigree" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

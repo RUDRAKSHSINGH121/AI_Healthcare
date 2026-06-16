@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Kidney Disease Prediction</h1>
+        <form id="kidney-disease-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="bp">Blood Pressure:</label>
+            <input type="number" id="bp" name="bp" required>
+
+            <label for="sg">Specific Gravity:</label>
+            <input type="number" step="0.01" id="sg" name="sg" required>
+
+            <label for="al">Albumin:</label>
+            <input type="number" id="al" name="al" required>
+
+            <label for="su">Sugar:</label>
+            <input type="number" id="su" name="su" required>
+
+            <label for="rbc">Red Blood Cells:</label>
+            <select id="rbc" name="rbc" required>
+                <option value="0">Normal</option>
+                <option value="1">Abnormal</option>
+            </select>
+
+            <label for="pc">Pus Cell:</label>
+            <select id="pc" name="pc" required>
+                <option value="0">Normal</option>
+                <option value="1">Abnormal</option>
+            </select>
+
+            <label for="pcc">Pus Cell Clumps:</label>
+            <select id="pcc" name="pcc" required>
+                <option value="0">Not Present</option>
+                <option value="1">Present</option>
+            </select>
+
+            <label for="ba">Bacteria:</label>
+            <select id="ba" name="ba" required>
+                <option value="0">Not Present</option>
+                <option value="1">Present</option>
+            </select>
+
+            <label for="bgr">Blood Glucose Random:</label>
+            <input type="number" step="0.01" id="bgr" name="bgr" required>
+
+            <label for="bu">Blood Urea:</label>
+            <input type="number" step="0.01" id="bu" name="bu" required>
+
+            <label for="sc">Serum Creatinine:</label>
+            <input type="number" step="0.01" id="sc" name="sc" required>
+
+            <label for="sod">Sodium:</label>
+            <input type="number" step="0.01" id="sod" name="sod" required>
+
+            <label for="pot">Potassium:</label>
+            <input type="number" step="0.01" id="pot" name="pot" required>
+
+            <label for="hemo">Hemoglobin:</label>
+            <input type="number" step="0.01" id="hemo" name="hemo" required>
+
+            <label for="pcv">Packed Cell Volume:</label>
+            <input type="number" step="0.01" id="pcv" name="pcv" required>
+
+            <label for="wbcc">White Blood Cell Count:</label>
+            <input type="number" step="0.01" id="wbcc" name="wbcc" required>
+
+            <label for="rbcc">Red Blood Cell Count:</label>
+            <input type="number" step="0.01" id="rbcc" name="rbcc" required>
+
+            <label for="htn">Hypertension:</label>
+            <select id="htn" name="htn" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="dm">Diabetes Mellitus:</label>
+            <select id="dm" name="dm" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="cad">Coronary Artery Disease:</label>
+            <select id="cad" name="cad" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="appet">Appetite:</label>
+            <select id="appet" name="appet" required>
+                <option value="0">Good</option>
+                <option value="1">Poor</option>
+            </select>
+
+            <label for="pe">Pedal Edema:</label>
+            <select id="pe" name="pe" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <label for="ane">Anemia:</label>
+            <select id="ane" name="ane" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div id="prediction-result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

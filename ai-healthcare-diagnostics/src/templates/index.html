@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Healthcare Diagnostics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to AI Healthcare Diagnostics</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('heart_disease') }}">Heart Disease Prediction</a></li>
+                <li><a href="{{ url_for('diabetes') }}">Diabetes Prediction</a></li>
+                <li><a href="{{ url_for('breast_cancer') }}">Breast Cancer Prediction</a></li>
+                <li><a href="{{ url_for('liver_disease') }}">Liver Disease Prediction</a></li>
+                <li><a href="{{ url_for('kidney_disease') }}">Kidney Disease Prediction</a></li>
+                <li><a href="{{ url_for('diagnosis_dashboard') }}">Diagnosis Dashboard</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About Our Application</h2>
+            <p>This application uses machine learning models to predict various health conditions based on user input.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 AI Healthcare Diagnostics</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Liver Disease Prediction</h1>
+        <form id="liver-disease-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender (1 = Male; 0 = Female):</label>
+            <input type="number" id="gender" name="gender" required>
+
+            <label for="total_bilirubin">Total Bilirubin:</label>
+            <input type="number" step="any" id="total_bilirubin" name="total_bilirubin" required>
+
+            <label for="direct_bilirubin">Direct Bilirubin:</label>
+            <input type="number" step="any" id="direct_bilirubin" name="direct_bilirubin" required>
+
+            <label for="alkaline_phosphotase">Alkaline Phosphotase:</label>
+            <input type="number" step="any" id="alkaline_phosphotase" name="alkaline_phosphotase" required>
+
+            <label for="alamine_aminotransferase">Alamine Aminotransferase:</label>
+            <input type="number" step="any" id="alamine_aminotransferase" name="alamine_aminotransferase" required>
+
+            <label for="aspartate_aminotransferase">Aspartate Aminotransferase:</label>
+            <input type="number" step="any" id="aspartate_aminotransferase" name="aspartate_aminotransferase" required>
+
+            <label for="total_proteins">Total Proteins:</label>
+            <input type="number" step="any" id="total_proteins" name="total_proteins" required>
+
+            <label for="albumin">Albumin:</label>
+            <input type="number" step="any" id="albumin" name="albumin" required>
+
+            <label for="albumin_and_globulin_ratio">Albumin and Globulin Ratio:</label>
+            <input type="number" step="any" id="albumin_and_globulin_ratio" name="albumin_and_globulin_ratio" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        <div id="prediction-result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
